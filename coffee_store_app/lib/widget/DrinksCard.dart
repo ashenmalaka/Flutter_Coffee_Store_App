@@ -40,10 +40,26 @@ List<DrinkType> smoothieTypes = <DrinkType>[
 
 
 class DrinksCard extends StatelessWidget {
+
+  final DrinkType drinkType;
+
+  const DrinksCard({Key key, this.drinkType}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Card(
+      child: Center(
+        child: Stack(
+          children: <Widget>[
+            Image.asset(
+              drinkType.image,
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.cover,
+            )
+          ],
+        ),
+      ),
     );
   }
 }
