@@ -1,7 +1,7 @@
 class DrinkType{
   final String title;
   final String image;
-  final String price;
+  final double price;
 
   DrinkType(this.title, this.image, this.price);
 }
