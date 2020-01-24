@@ -56,6 +56,9 @@ class DrinksCard extends StatelessWidget {
               height: double.infinity,
               width: double.infinity,
               fit: BoxFit.cover,
+            ),
+            Text(
+              drinkType.title
             )
           ],
         ),
