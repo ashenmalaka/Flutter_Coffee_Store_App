@@ -10,6 +10,7 @@ class StoreHomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.lightBlue,
       appBar: AppBar(
         title: Text(title),
       ),
