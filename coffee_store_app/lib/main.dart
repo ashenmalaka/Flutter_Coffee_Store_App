@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: StoreHomePage(title: 'Flutter Demo Home Page'),
+      home: StoreHomePage(
+        title: 'Coffee Store App'
+        ),
     );
   }
 }

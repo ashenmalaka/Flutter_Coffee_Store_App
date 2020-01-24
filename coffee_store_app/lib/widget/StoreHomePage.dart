@@ -1,3 +1,4 @@
+import 'package:coffee_store_app/widget/DrinksCarousel.dart';
 import 'package:flutter/material.dart';
 
 class StoreHomePage extends StatelessWidget {
@@ -8,8 +9,15 @@ class StoreHomePage extends StatelessWidget {
    
   @override
   Widget build(BuildContext context) {
-    return Container(
-      
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(title),
+      ),
+      body: Column(
+        children: <Widget>[
+          DrinksCarousel(),
+        ],
+      ),
     );
   }
 }
