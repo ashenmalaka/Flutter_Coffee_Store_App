@@ -7,6 +7,7 @@ class DrinksList extends StatelessWidget {
     return Expanded(
       child: GridView.count(
         crossAxisCount: 2,
+        padding: EdgeInsets.all(6.0),
         children: coffeeTypes.map((drinkType){
           return DrinksCard(
             drinkType: drinkType,
