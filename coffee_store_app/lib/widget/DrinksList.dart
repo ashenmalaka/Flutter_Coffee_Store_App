@@ -11,7 +11,7 @@ class DrinksList extends StatelessWidget {
         children: coffeeTypes.map((drinkType){
           return DrinksCard(
             drinkType: drinkType,
-          )
+          );
         }).toList(),
       ),
     );
