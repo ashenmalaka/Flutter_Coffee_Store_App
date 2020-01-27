@@ -35,13 +35,23 @@ class _DrinksCarouselState extends State<DrinksCarousel>
             width: 4.0, 
             )
           ),
-        child: TabBarView(
-          controller: _tabController,
-          children: mainTypes.map((drinkType) {
-            return DrinksCard(
-              drinkType: drinkType,
-            );
-          }).toList(),
+        child: Stack(
+          children: <Widget>[
+           TabBarView(
+            controller: _tabController,
+            children: mainTypes.map((drinkType) {
+              return DrinksCard(
+                drinkType: drinkType,
+              );
+            }).toList(),
+           ),
+           TabPageSelector(
+             controller: _tabController,
+             color: Colors.white,
+             indicatorSize: 20.0,
+           )
+          ],
+          
         ),
       ),
     );
