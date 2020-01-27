@@ -45,10 +45,13 @@ class _DrinksCarouselState extends State<DrinksCarousel>
               );
             }).toList(),
            ),
-           TabPageSelector(
-             controller: _tabController,
-             color: Colors.white,
-             indicatorSize: 20.0,
+           Align(
+             alignment: Alignment.bottomCenter,
+             child: TabPageSelector(
+               controller: _tabController,
+               color: Colors.white,
+               indicatorSize: 20.0,
+             ),
            )
           ],
           
