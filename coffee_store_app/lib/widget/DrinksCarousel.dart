@@ -47,11 +47,14 @@ class _DrinksCarouselState extends State<DrinksCarousel>
            ),
            Align(
              alignment: Alignment.bottomCenter,
-             child: TabPageSelector(
-               controller: _tabController,
-               color: Colors.white,
-               indicatorSize: 20.0,
-             ),
+             child: Padding(
+               padding: const EdgeInsets.all(8.0),
+               child: TabPageSelector(
+                 controller: _tabController,
+                 color: Colors.white,
+                 indicatorSize: 20.0,
+               ),
+             )Add,
            )
           ],
           
