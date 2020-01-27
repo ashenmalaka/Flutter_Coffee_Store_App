@@ -6,7 +6,23 @@ class DrinksCarousel extends StatefulWidget {
   _DrinksCarouselState createState() => _DrinksCarouselState();
 }
 
-class _DrinksCarouselState extends State<DrinksCarousel> {
+class _DrinksCarouselState extends State<DrinksCarousel> 
+  with SingleTickerProviderStateMixin {
+
+    TabController _tabController;
+
+    @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: coffeeTypes.length, vsync: this);
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    _tabController.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -19,8 +35,13 @@ class _DrinksCarouselState extends State<DrinksCarousel> {
             width: 4.0, 
             )
           ),
-        child: DrinksCard(
-          drinkType: mainTypes[0],
+        child: TabBarView(
+          controller: _tabController,
+          children: mainTypes.map((drinkType) {
+            return DrinksCard(
+              drinkType: drinkType,
+            );
+          }).toList(),
         ),
       ),
     );
