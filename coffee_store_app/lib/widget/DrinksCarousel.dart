@@ -54,7 +54,14 @@ class _DrinksCarouselState extends State<DrinksCarousel>
                  color: Colors.white,
                  indicatorSize: 20.0,
                ),
-             )Add,
+             ),
+           ),
+           IconButton(
+             icon: Icon(
+               Icons.arrow_back,
+               color: Colors.white,
+               size: 36.0,
+             ),
            )
           ],
           
