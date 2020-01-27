@@ -65,6 +65,16 @@ class _DrinksCarouselState extends State<DrinksCarousel>
                  size: 36.0,
                ),
              ),
+           ),
+           Align(
+             alignment: Alignment.centerRight,
+             child: IconButton(
+               icon: Icon(
+                 Icons.arrow_back,
+                 color: Colors.white,
+                 size: 36.0,
+               ),
+             ),
            )
           ],
           
