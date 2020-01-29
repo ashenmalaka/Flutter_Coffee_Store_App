@@ -30,6 +30,9 @@ class _DrinksCarouselState extends State<DrinksCarousel>
     } else if(newTabIndex < 0){
       newTabIndex = coffeeTypes.length - 1;
     }
+    _tabController.animateTo(
+      newTabIndex,
+    );
   }
 
   @override
@@ -73,6 +76,12 @@ class _DrinksCarouselState extends State<DrinksCarousel>
                  color: Colors.white,
                  size: 36.0,
                ),
+               onPressed: () {
+                 _changeImage(
+                   delta: -1,
+                   userInput: true
+                 );
+               },
              ),
            ),
            Align(
@@ -83,6 +92,12 @@ class _DrinksCarouselState extends State<DrinksCarousel>
                  color: Colors.white,
                  size: 36.0,
                ),
+               onPressed: () {
+                 _changeImage(
+                   delta: 1,
+                   userInput: true
+                 );
+               },
              ),
            )
           ],
