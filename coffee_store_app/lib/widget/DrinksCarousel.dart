@@ -32,6 +32,10 @@ class _DrinksCarouselState extends State<DrinksCarousel>
     }
     _tabController.animateTo(
       newTabIndex,
+      duration: Duration(
+        microseconds: 1000,
+      ),
+      curve: Curves.easeIn,
     );
   }
 
