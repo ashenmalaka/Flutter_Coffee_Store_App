@@ -57,6 +57,13 @@ class DrinksCard extends StatelessWidget {
               image: AssetImage(
                 drinkType.image,
               ),
+              height: double.infinity,
+              width: double.infinity,
+              fit: BoxFit.cover,
+              fadeInDuration: Duration(
+                microseconds: 500,
+              ),
+              fadeInCurve: Curves.easeIn,
             ),
             Align(
               alignment: Alignment.topCenter,
