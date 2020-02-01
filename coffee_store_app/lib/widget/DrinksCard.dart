@@ -1,5 +1,6 @@
 import 'package:coffee_store_app/model/DrinkType.dart';
 import 'package:flutter/material.dart';
+import 'package:transparent_image/transparent_image.dart';
 
 List<DrinkType> mainTypes = <DrinkType>[
   DrinkType('Coffee', 'assets/img/black-coffee.jpeg', 4.12),
@@ -51,11 +52,11 @@ class DrinksCard extends StatelessWidget {
       child: Center(
         child: Stack(
           children: <Widget>[
-            Image.asset(
-              drinkType.image,
-              height: double.infinity,
-              width: double.infinity,
-              fit: BoxFit.cover,
+            FadeInImage(
+              placeholder: MemoryImage(kTransparentImage),
+              image: AssetImage(
+                drinkType.image,
+              ),
             ),
             Align(
               alignment: Alignment.topCenter,
