@@ -24,6 +24,9 @@ class _DrinksCarouselState extends State<DrinksCarousel>
   }
 
   void _changeImage({int delta, bool userInput = false}){
+
+    imageCache.clear();
+    
     var newTabIndex = _tabController.index + delta;
     if(newTabIndex >= coffeeTypes.length){
       newTabIndex = 0;
