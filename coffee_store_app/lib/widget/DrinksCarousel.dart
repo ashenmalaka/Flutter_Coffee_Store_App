@@ -34,9 +34,14 @@ class _DrinksCarouselState extends State<DrinksCarousel>
   void dispose() {
     super.dispose();
     _tabController.dispose();
+    _carouselTimer.cancel();
   }
 
   void _changeImage({int delta, bool userInput = false}){
+
+    if(userInput){
+      _carouselTimer.cancel();
+    }
 
     imageCache.clear();
     
