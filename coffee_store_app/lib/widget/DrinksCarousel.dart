@@ -76,6 +76,7 @@ class _DrinksCarouselState extends State<DrinksCarousel>
         child: Stack(
           children: <Widget>[
            ScopedModelDescendant<DrinksListModel> (
+             rebuildOnChange: false,
              builder: (context, _, model){
                return TabBarView(
                  controller: _tabController,
