@@ -4,7 +4,7 @@ import 'package:scoped_model/scoped_model.dart';
 
 class DrinksList extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext scaffoldContext) {
     return ScopedModelDescendant(
       builder: (context, _, model){
        return Expanded(
@@ -12,9 +12,23 @@ class DrinksList extends StatelessWidget {
          crossAxisCount: 2,
          padding: EdgeInsets.all(6.0),
          children: model.drinkType.map((drinkType){
-          return DrinksCard(
-            drinkType: drinkType,
-           );
+          return GestureDetector(
+            onTap: () {
+              showDialog(
+                context: scaffoldContext,
+                builder: (BuildContext dialogContext){
+                  return AlertDialog(
+                    title: Text(
+                      'Order',
+                    ),
+                  );
+                }
+              );
+            },
+            child: DrinksCard(
+              drinkType: drinkType,
+             ),
+          );
          }).toList(),
        ),
       );
