@@ -21,6 +21,16 @@ class DrinksList extends StatelessWidget {
                     title: Text(
                       'Order',
                     ),
+                    content: Row(
+                      children: <Widget>[
+                        Image.asset(
+                          drinkType.image,
+                          height: 100.0,
+                          width: 100.0,
+                          fit: BoxFit.cover,
+                        )
+                      ],
+                    ),
                   );
                 }
               );
