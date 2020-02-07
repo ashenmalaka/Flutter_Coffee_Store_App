@@ -29,19 +29,23 @@ class DrinksList extends StatelessWidget {
                           width: 100.0,
                           fit: BoxFit.cover,
                         ),
-                        Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: <Widget>[
-                            Text(
-                              drinkType.title,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                        Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Column(
+                            mainAxisSize: MainAxisSize.min,
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                drinkType.title,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              'Price: \$${drinkType.price}',
-                            )
-                          ],
+                              Text(
+                                'Price: \$${drinkType.price}',
+                              )
+                            ],
+                          ),
                         )
                       ],
                     ),
