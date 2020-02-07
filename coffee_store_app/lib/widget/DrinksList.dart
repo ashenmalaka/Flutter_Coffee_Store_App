@@ -30,9 +30,13 @@ class DrinksList extends StatelessWidget {
                           fit: BoxFit.cover,
                         ),
                         Column(
+                          mainAxisSize: MainAxisSize.min,
                           children: <Widget>[
                             Text(
                               drinkType.title,
+                              style: TextStyle(
+                                fontWeight: FontWeight.bold,
+                              ),
                             ),
                             Text(
                               'Price: \$${drinkType.price}',
