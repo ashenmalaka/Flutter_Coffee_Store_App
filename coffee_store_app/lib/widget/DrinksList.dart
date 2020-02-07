@@ -22,6 +22,7 @@ class DrinksList extends StatelessWidget {
                       'Order',
                     ),
                     content: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: <Widget>[
                         Image.asset(
                           drinkType.image,
