@@ -28,6 +28,16 @@ class DrinksList extends StatelessWidget {
                           height: 100.0,
                           width: 100.0,
                           fit: BoxFit.cover,
+                        ),
+                        Column(
+                          children: <Widget>[
+                            Text(
+                              drinkType.title,
+                            ),
+                            Text(
+                              'Price: \$${drinkType.price}',
+                            )
+                          ],
                         )
                       ],
                     ),
