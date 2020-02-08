@@ -63,7 +63,9 @@ class DrinksList extends StatelessWidget {
                             fontSize: 18.0,
                           ),
                         ), 
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(dialogContext);
+                        },
                       ),
                       FlatButton(
                         child: Text(
