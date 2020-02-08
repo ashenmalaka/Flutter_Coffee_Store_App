@@ -55,6 +55,26 @@ class DrinksList extends StatelessWidget {
                         ],
                       ),
                     ),
+                    actions: <Widget>[
+                      FlatButton(
+                        child: Text(
+                          'Cancel',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ), 
+                        onPressed: () {},
+                      ),
+                      FlatButton(
+                        child: Text(
+                          'Send',
+                          style: TextStyle(
+                            fontSize: 18.0,
+                          ),
+                        ), 
+                        onPressed: () {},
+                      )
+                    ],
                   );
                 }
               );
