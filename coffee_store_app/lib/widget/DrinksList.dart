@@ -74,7 +74,22 @@ class DrinksList extends StatelessWidget {
                             fontSize: 18.0,
                           ),
                         ), 
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pop(dialogContext);
+                          final snackBar = SnackBar(
+                            backgroundColor: Colors.white,
+                            duration: Duration(
+                              seconds: 4,
+                            ),
+                            content: Text(
+                              '${drinkType.title} order confirmed',
+                              style: TextStyle(
+                                color: Colors.black,
+                                fontSize: 18.0,
+                              ),
+                            ),
+                          );
+                        },
                       )
                     ],
                   );
