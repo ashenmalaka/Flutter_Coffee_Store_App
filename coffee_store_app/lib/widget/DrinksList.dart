@@ -89,6 +89,7 @@ class DrinksList extends StatelessWidget {
                               ),
                             ),
                           );
+                          Scaffold.of(scaffoldContext).showSnackBar(snackBar);
                         },
                       )
                     ],
