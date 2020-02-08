@@ -21,34 +21,39 @@ class DrinksList extends StatelessWidget {
                     title: Text(
                       'Order',
                     ),
-                    content: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        Image.asset(
-                          drinkType.image,
-                          height: 100.0,
-                          width: 100.0,
-                          fit: BoxFit.cover,
-                        ),
-                        Padding(
-                          padding: const EdgeInsets.all(8.0),
-                          child: Column(
-                            mainAxisSize: MainAxisSize.min,
-                            crossAxisAlignment: CrossAxisAlignment.start,
-                            children: <Widget>[
-                              Text(
-                                drinkType.title,
-                                style: TextStyle(
-                                  fontWeight: FontWeight.bold,
-                                ),
-                              ),
-                              Text(
-                                'Price: \$${drinkType.price}',
-                              )
-                            ],
+                    content: DecoratedBox(
+                      decoration: BoxDecoration(
+                        color: Colors.lime,
+                      ),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Image.asset(
+                            drinkType.image,
+                            height: 100.0,
+                            width: 100.0,
+                            fit: BoxFit.cover,
                           ),
-                        )
-                      ],
+                          Padding(
+                            padding: const EdgeInsets.all(8.0),
+                            child: Column(
+                              mainAxisSize: MainAxisSize.min,
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: <Widget>[
+                                Text(
+                                  drinkType.title,
+                                  style: TextStyle(
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                Text(
+                                  'Price: \$${drinkType.price}',
+                                )
+                              ],
+                            ),
+                          )
+                        ],
+                      ),
                     ),
                   );
                 }
